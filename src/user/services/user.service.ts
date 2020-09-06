@@ -5,7 +5,6 @@ import { Repository } from 'typeorm';
 import { UserDTO } from '../dto/user.dto';
 import { HashProvider } from '../providers/hash.provider';
 import { UpdateUserDTO } from '../dto/update-user.dto';
-import { throwError } from 'rxjs';
 
 @Injectable()
 export class UserService {
