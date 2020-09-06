@@ -57,6 +57,8 @@ export class UserService {
 
     const user = this.usersRepository.create({ ...userExist, ...updatedUser });
 
+    delete user.password;
+
     return user;
   }
 
