@@ -1,6 +1,7 @@
 import { IsNotEmpty, IsString, MinLength, IsEmail } from 'class-validator';
 
 export class UserDTO {
+  readonly id?: string;
   @IsNotEmpty()
   @IsString()
   @MinLength(3)
