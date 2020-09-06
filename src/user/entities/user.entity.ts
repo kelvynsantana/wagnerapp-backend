@@ -11,13 +11,24 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: false,
+  })
   name: string;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    unique: true,
+
+    nullable: false,
+  })
   email: string;
 
-  @Column({ select: false })
+  @Column({
+    type: 'varchar',
+    nullable: false,
+  })
   password: string;
 
   @CreateDateColumn()
